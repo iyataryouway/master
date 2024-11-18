@@ -9,6 +9,14 @@ app.get("/user/:id", (req, res) => {
    res.send(`User id is ${userId}`);
 });
 
+
+//in the browser http://localhost:3000/search
+
+app.get("/search", (req, res) => {
+    const query = req.query.q;
+    res.send(`The query search term is ${query}`);
+ });
+
 app.listen(PORT, () => {
    console.log(`Server started on ${PORT}`);
 });  
