@@ -7,7 +7,7 @@ const router = express.Router();
 //Defining route to root  ('/')
 
 router.get("/", (req, res) =>{
-    res.send("This it the home page!");
+    res.send("This is the home page!");
 });
 
 //Defining route to about page
