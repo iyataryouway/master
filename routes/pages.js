@@ -13,7 +13,7 @@ router.get("/", (req, res) =>{
 //Defining route to about page
 
 router.get("/about", (req, res) =>{
-    res.send("This it the about page!");
+    res.send("This is the about page!");
 });
 
 //enable exporting the router for use in app.js file
