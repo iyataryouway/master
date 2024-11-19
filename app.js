@@ -1,22 +1,15 @@
+// Import the Express module and router from pages.js file
 const express = require('express');
+const router = require("./routes/pages");
+
+//Create an Express application and define the port number for the server as 3000
 const app = express();
 const PORT = 3000;
 
-//in the browser http://localhost:3000/user/23
+//Middleware to handle the routing
+app.use('/', router); //apply router to all paths
 
-app.get("/user/:id", (req, res) => {
-   const userId = req.params.id;
-   res.send(`User id is ${userId}`);
-});
-
-
-//in the browser http://localhost:3000/search
-
-app.get("/search", (req, res) => {
-    const query = req.query.q;
-    res.send(`The query search term is ${query}`);
- });
-
+//Initialize the server and listen on port specified above
 app.listen(PORT, () => {
-   console.log(`Server started on ${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });  
